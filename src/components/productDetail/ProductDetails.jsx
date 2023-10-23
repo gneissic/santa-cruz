@@ -6,6 +6,7 @@ import { BsArrowLeft, BsStar, BsTruck } from "react-icons/bs";
 import { Form } from "react-router-dom";
 
 const ProductDetails = ({ data }) => {
+  const price = data.price.toFixed(2)
   return (
     <Fragment>
       <NavItems />
@@ -18,14 +19,14 @@ const ProductDetails = ({ data }) => {
           alt=""
         />
       </div>
-      <CollectionsNav page="collections" child="shop 5010 small parts" />
+      <CollectionsNav page="collections" child={`shop ${data.title} small parts`} />
       <div className="pt-2">
         <h1 className="text-center text-3xl font-posp font-bold text-black">
           {data.title}
         </h1>
       </div>
       <p className="text-center pt-3 text-lg font-pops text-black/80 font-bold ">
-        ${data.price}
+        ${price}
       </p>
       <p className="text-center font-pops text-sm text-black/80 tracking-wider font-semibold">
         shipping calculated at checkout

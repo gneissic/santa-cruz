@@ -2,7 +2,6 @@ import { Link } from "react-router-dom"
 
 
 const JulianaHomepageItems = (props) => {
-    console.log(props.id);
   return (
     <div>
         <Link to={props.id}>

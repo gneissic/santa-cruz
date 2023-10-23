@@ -55,7 +55,16 @@ import DriverDetailPage from "./pages/DriverDetailPage";
 import {loader as driverDetailLoader} from "./pages/driverDetail";
 import HecklerDetailPage from "./pages/HecklerDetailPage";
 import {loader as hecklerDetailLoader} from "./pages/hecklerDetail";
-
+import ShopCasualDetailPage from "./pages/ShopCasualDetailPage";
+import {loader as shopCasualDetailLoader} from "./pages/shopCasualDetail";
+import ShopRidingDetailPage from "./pages/ShopRidingDetailPage";
+import {loader as shopRidingDetailLoader} from "./pages/shopRidingDetail";
+import CruzBicyclesDetailPage from "./pages/CruzBicyclesDetailPage";
+import {loader as cruzBicycleDetailLoader} from "./pages/cruzBicycleDetail";
+import ReserveDetailsPage from "./pages/ReserveDetailsPage";
+import {loader as reserveDetailLoader} from "./pages/reserveDetail";
+import OneupDetailPage from "./pages/OneupDetailPage";
+import {loader as oneUpDetailLoader} from "./pages/oneUpDetail";
 
 function App() {
   const router = createBrowserRouter([
@@ -63,11 +72,16 @@ function App() {
     { path: "pages/bike-model", element: <BikeModelsPage />, loader: bikeLoader},
     { path: "pages/juliana-bike-models", element: <JulianaModelsPage />, loader: julianabikeLoader},
     { path: "collections/casual-apparel", element: <ShopCasualPage />, loader:apprelActions},
+    { path: "collections/casual-apparel/:casualDetail", element: <ShopCasualDetailPage />, loader:shopCasualDetailLoader},
     { path: "collections/riding-apparel", element: <SHopRidingPage />, loader:ridingLoader},
+    { path: "collections/riding-apparel/:rideDetail", element: <ShopRidingDetailPage />, loader:shopRidingDetailLoader},
     { path: "collections/santa-cruz-bicycles", element: <CruzBicyclesPage />, loader:cruzBicyclesLoader},
+    { path: "collections/santa-cruz-bicycles/:cruzDetail", element: <CruzBicyclesDetailPage />, loader:cruzBicycleDetailLoader},
     { path: "collections/reserve-wheels", element: <ReserveWheelsPage />, loader:reserveWheelsLoader},
+    { path: "collections/reserve-wheels/:reserveDetail", element: <ReserveDetailsPage />, loader:reserveDetailLoader},
     { path: "pages/juliana-homepage", element: <JulianaHomePage />, loader:julianaHomeLoader},
     { path: "collections/oneup-components", element: <OneUpPage />, loader:oneUpLoader},
+    { path: "collections/oneup-components/:oneUpDetail", element: <OneupDetailPage />, loader:oneUpDetailLoader},
     { path: "collections/first", element: <FirstPartPage />, loader:firstLoader},
     { path: "collections/first/:productDetail", element: <FirstDetailPage />, loader:firstDetailLoader},
     { path: "collections/bantamItems", element: <BantamPage />, loader:bantamLoader},

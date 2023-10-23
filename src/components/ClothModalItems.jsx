@@ -2,6 +2,7 @@ import { Fragment } from "react"
 import { Link } from "react-router-dom"
 
 const ClothModalItems = (props) => {
+  const price = props.price.toFixed(2)
   return (
 
     <Fragment>
@@ -9,7 +10,7 @@ const ClothModalItems = (props) => {
     <div className="text-center font-pops">
         <img className="w-[12rem] h-[12rem]" src={props.img} alt={props.title} />
         <p className="font-bold text-black">{props.title}</p>
-        <p className="text-gray-700">${props.price}</p>
+        <p className="text-gray-700">${price}</p>
     </div>
     </Link>
     </Fragment>
