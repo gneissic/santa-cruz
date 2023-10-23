@@ -1,6 +1,6 @@
 export async function loader() {
     const response = await fetch(
-      "https://santa-cruz-64b2d-default-rtdb.firebaseio.com/cruz-bicycles.json"
+      "https://santa-cruz-64b2d-default-rtdb.firebaseio.com/bronson.json"
     );
     if (!response.ok) {
       throw new Error("something went wrong")
@@ -10,7 +10,7 @@ export async function loader() {
     for (const key in data) {
       responseData.push({
         
-        clothImg: data[key].clothImg,
+        clothImg: data[key].img,
         id: data[key].id,
         title:data[key].title,
         price:data[key].price

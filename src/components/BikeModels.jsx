@@ -13,7 +13,7 @@ const BikeModels = ({data}) => {
      <BannerBody img={Banner2} />
      <div className=
      "grid gap-7 mt-5">
-       {data.map((dat)=>(<BikeModalItems key={dat.id} img={dat.bikeImg} title={dat.title} />))} 
+       {data.map((dat)=>(<BikeModalItems key={dat.id}  id={dat.id} img={dat.bikeImg} title={dat.title} />))} 
      </div>
     </div>
   )

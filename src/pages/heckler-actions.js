@@ -1,6 +1,6 @@
 export async function loader() {
     const response = await fetch(
-      "https://santa-cruz-64b2d-default-rtdb.firebaseio.com/bantam-items.json"
+      "https://santa-cruz-64b2d-default-rtdb.firebaseio.com/heckler.json"
     );
     if (!response.ok) {
       throw new Error("something went wrong")
