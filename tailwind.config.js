@@ -19,6 +19,7 @@ export default {
        "lato" : `Lato sans-serif`,
        "nun": `Nunito Sans sans-serif`,
        "pops": `Poppins, sans-serif`,
+        "ken" :    `Kenia, sans-serif`,
 
       },
       backgroundColor:{

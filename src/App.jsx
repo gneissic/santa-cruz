@@ -72,9 +72,12 @@ import Root from "./components/root";
 
 
 
+
 function App() {
+ 
+
   const router = createBrowserRouter([
-    {path: "/", element: <Root/>, children:[{ path: "/", element: <HomePage />, loader: homePageActions }, { path: "pages/bike-model", element: <BikeModelsPage />, loader: bikeLoader},
+    {path: "/", element: <Root />, children:[{ path: "/", element: <HomePage />, loader: homePageActions }, { path: "pages/bike-model", element: <BikeModelsPage />, loader: bikeLoader},
     { path: "pages/juliana-bike-models", element: <JulianaModelsPage />, loader: julianabikeLoader},
     { path: "collections/casual-apparel", element: <ShopCasualPage />, loader:apprelActions},
     { path: "collections/casual-apparel/:casualDetail", element: <ShopCasualDetailPage />, loader:shopCasualDetailLoader},

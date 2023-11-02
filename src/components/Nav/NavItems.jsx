@@ -6,7 +6,7 @@ import { TbMenu } from "react-icons/tb";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
-const NavItems = () => {
+const NavItems = (props) => {
   const cartNumber = useSelector((state)=> state.cart.cartNumber)
   const [isFixed, setIsFixed] = useState(false)
   useEffect(() => {
@@ -26,7 +26,7 @@ const NavItems = () => {
   }, []);
   return (
     <Fragment>
-      <div className={`${isFixed ? "fixed z-40 inset-0  bg-white h-[5rem]" : "static"}`}>
+      <div className={`${isFixed ? "fixed z-30 inset-0  bg-white h-[5rem]" : "static"}`}>
       <div className="flex items-center justify-between pt-5 px-2 bg-white">
         <div>
           <MdOutlineManageAccounts className="w-10 h-10 text-slate-700" />
@@ -41,7 +41,10 @@ const NavItems = () => {
           <p className="  absolute -top-4 -right-3 grid place-items-center bg-red-900 text-white h-7 w-7 border border-red-900 rounded-full">{cartNumber}</p>
           </div>
           </Link>
+          <div onClick={props.nav}>
+
           <TbMenu className="w-7 h-7 text-slate-700" />
+          </div>
         </div>
       </div>
       </div>
