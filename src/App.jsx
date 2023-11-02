@@ -1,3 +1,4 @@
+
 import "./App.css";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -24,7 +25,7 @@ import FirstPartPage from "./pages/FirstPartPage";
 import BantamPage from "./pages/BantamPage";
 import {loader as bantamLoader  } from "./pages/bantam-actions";
 import BlurPage from "./pages/BlurPage";
-import { loader as blurActions } from "./pages/blur-actions";
+import { loader as blurLoader } from "./pages/blur-actions";
 import BronsonPage from "./pages/BronsonPage";
 import {  loader as bronsonLoader } from "./pages/bronson-actions";
 import BullitPage from "./pages/BullitPage";
@@ -65,16 +66,19 @@ import ReserveDetailsPage from "./pages/ReserveDetailsPage";
 import {loader as reserveDetailLoader} from "./pages/reserveDetail";
 import OneupDetailPage from "./pages/OneupDetailPage";
 import {loader as oneUpDetailLoader} from "./pages/oneUpDetail";
+import Cart from "./components/cart/Cart";
+import CheckoutPage from "./pages/CheckoutPage";
+import Root from "./components/root";
+
+
 
 function App() {
   const router = createBrowserRouter([
-    { path: "/", element: <HomePage />, loader: homePageActions },
-    { path: "pages/bike-model", element: <BikeModelsPage />, loader: bikeLoader},
+    {path: "/", element: <Root/>, children:[{ path: "/", element: <HomePage />, loader: homePageActions }, { path: "pages/bike-model", element: <BikeModelsPage />, loader: bikeLoader},
     { path: "pages/juliana-bike-models", element: <JulianaModelsPage />, loader: julianabikeLoader},
     { path: "collections/casual-apparel", element: <ShopCasualPage />, loader:apprelActions},
     { path: "collections/casual-apparel/:casualDetail", element: <ShopCasualDetailPage />, loader:shopCasualDetailLoader},
-    { path: "collections/riding-apparel", element: <SHopRidingPage />, loader:ridingLoader},
-    { path: "collections/riding-apparel/:rideDetail", element: <ShopRidingDetailPage />, loader:shopRidingDetailLoader},
+    { path: "collections/riding-apparel", element: <SHopRidingPage />, loader:ridingLoader},   { path: "collections/riding-apparel/:rideDetail", element: <ShopRidingDetailPage />, loader:shopRidingDetailLoader},
     { path: "collections/santa-cruz-bicycles", element: <CruzBicyclesPage />, loader:cruzBicyclesLoader},
     { path: "collections/santa-cruz-bicycles/:cruzDetail", element: <CruzBicyclesDetailPage />, loader:cruzBicycleDetailLoader},
     { path: "collections/reserve-wheels", element: <ReserveWheelsPage />, loader:reserveWheelsLoader},
@@ -86,7 +90,7 @@ function App() {
     { path: "collections/first/:productDetail", element: <FirstDetailPage />, loader:firstDetailLoader},
     { path: "collections/bantamItems", element: <BantamPage />, loader:bantamLoader},
     { path: "collections/bantamItems/:bantamDetail", element: <BantamDetailPage />, loader:bantamDetailLoader},
-    { path: "collections/blur-items", element: <BlurPage />, loader:blurActions},
+    { path: "collections/blur-items", element: <BlurPage />, loader:blurLoader},
     { path: "collections/blur-items/:blurDetail", element: <BlurDetailsPage />, loader:blurDetailLoader},
     { path: "collections/bronson-items", element: <BronsonPage />, loader:bronsonLoader},
     { path: "collections/bronson-items/:bronsonDetail", element: <BronsonDetailPage />, loader:bronsonDetailLoader},
@@ -100,11 +104,16 @@ function App() {
     { path: "collections/heckler-items/:hecklerDetail", element: <HecklerDetailPage />, loader:hecklerDetailLoader},
     { path: "collections/butcher-items", element: <BucherPage />, loader:butcherLoader},
     { path: "collections/butcher-items/:butcherDetail", element: <ButcherDetailPage />, loader:butcherDetailLoader},
+    { path: "cart", element: <Cart />},]},
+
+    { path: "checkout", element: <CheckoutPage />},
   ]);
 
   return (
     <>
+     
       <RouterProvider router={router} />
+      
     </>
   );
 }

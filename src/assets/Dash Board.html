@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)https://unnportal.unn.edu.ng/dashboard.aspx -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <!-- Required meta tags always come first -->
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="./Dash Board_files/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" id="compiled.css-css" href="./Dash Board_files/font-awesome.css" type="text/css" media="all">
+    <!-- Bootstrap core CSS -->
+
+    <link href="./Dash Board_files/bootstrap.reworked.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="./Dash Board_files/mdb.min.css" rel="stylesheet">
+
+
+    <title>Dash Board</title>
+
+    <style>
+        
+          .name-short {
+            display: none
+          }
+
+        @media only screen and (max-width: 600px) {
+          .name-full {
+            display: none
+          }
+          .name-short {
+            display: inline
+          }
+        }
+
+    </style>
+
+
+<style type="text/css">/* Chart.js */
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style><style>.gc-bubbleDefault{background-color:transparent!important;text-align:left;padding:0!important;margin:0!important;border:0!important;table-layout:auto!important}.gc-reset{background-color:transparent!important;border:0!important;padding:0!important;margin:0!important;text-align:left}.pls-bubbleTop{border-bottom:1px solid #ccc!important}.pls-contentLeft,.pls-topTail,.pls-vertShimLeft{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/border_3.gif)!important}.pls-topTail{background-repeat:repeat-x!important;background-position:bottom!important}.pls-vertShim{background-color:#fff!important;text-align:right}.tbl-grey .pls-vertShim{background-color:#f5f5f5!important}.pls-vertShimLeft{background-repeat:repeat-y!important;background-position:100%!important;height:4px}.pls-vertShimRight{height:4px}.pls-confirm-container .pls-vertShim{background-color:#fff3c2!important}.pls-contentWrap{background-color:#fff!important;position:relative!important;vertical-align:top}.pls-contentLeft{background-repeat:repeat-y;background-position:100%;vertical-align:top}.pls-dropRight{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleDropR_3.png)!important;background-repeat:repeat-y!important;vertical-align:top}.pls-dropBL,.pls-dropTR .pls-dropBR,.pls-tailleft,.pls-vert,.pls-vert img{vertical-align:top}.pls-dropBottom{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleDropB_3.png)!important;background-repeat:repeat-x!important;width:100%;vertical-align:top}.pls-topLeft{background:inherit!important;text-align:right;vertical-align:bottom}.pls-topRight{background:inherit!important;text-align:left;vertical-align:bottom}.pls-bottomLeft{background:inherit!important;text-align:right}.pls-bottomRight{background:inherit!important;text-align:left;vertical-align:top}.pls-tailbottom,.pls-tailleft,.pls-tailright,.pls-tailtop{display:none;position:relative}.pls-dropBL,.pls-dropBR,.pls-dropTR,.pls-tailbottom,.pls-tailleft,.pls-tailright,.pls-tailtop{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleSprite_3.png)!important;background-repeat:no-repeat}.tbl-grey .pls-dropBL,.tbl-grey .pls-dropBR,.tbl-grey .pls-dropTR,.tbl-grey .pls-tailbottom,.tbl-grey .pls-tailleft,.tbl-grey .pls-tailright,.tbl-grey .pls-tailtop{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleSprite-grey.png)!important}.pls-tailbottom{background-position:-23px 0}.pls-confirm-container .pls-tailbottom{background-position:-23px -10px}.pls-tailtop{background-position:-19px -20px}.pls-tailright{background-position:0 0}.pls-tailleft{background-position:-10px 0}.pls-tailtop{vertical-align:top}.gc-bubbleDefault td{line-height:0;font-size:0}.pls-tailbottom,.pls-topLeft img,.pls-topRight img{vertical-align:bottom}.bubbleDropTR,.pls-bottomLeft,.pls-bottomLeft img,.pls-dropBottom img,.pls-dropBottomL img,.pls-dropBottomR img{vertical-align:top}.pls-dropTR{background-position:0 -22px}.pls-dropBR{background-position:0 -27px}.pls-dropBL{background-position:0 -16px}.pls-spacerbottom,.pls-spacerleft,.pls-spacerright,.pls-spacertop{position:static!important}.pls-spinner{bottom:0;position:absolute;left:0;margin:auto;right:0;top:0}</style></head>
+<body class="fixed-sn">
+    <form name="form1" method="post" action="https://unnportal.unn.edu.ng/dashboard.aspx" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNTQzNDQwNDc2D2QWAgIBD2QWBAIBDxYCHgNzcmMF0h5kYXRhOmltYWdlL3BuZztiYXNlNjQsLzlqLzRBQVFTa1pKUmdBQkFRRUFZQUJnQUFELzJ3QkRBQWdHQmdjR0JRZ0hCd2NKQ1FnS0RCUU5EQXNMREJrU0V3OFVIUm9mSGgwYUhCd2dKQzRuSUNJc0l4d2NLRGNwTERBeE5EUTBIeWM1UFRneVBDNHpOREwvMndCREFRa0pDUXdMREJnTkRSZ3lJUndoTWpJeU1qSXlNakl5TWpJeU1qSXlNakl5TWpJeU1qSXlNakl5TWpJeU1qSXlNakl5TWpJeU1qSXlNakl5TWpJeU1qTC93QUFSQ0FCNEFIZ0RBU0lBQWhFQkF4RUIvOFFBSHdBQUFRVUJBUUVCQVFFQUFBQUFBQUFBQUFFQ0F3UUZCZ2NJQ1FvTC84UUF0UkFBQWdFREF3SUVBd1VGQkFRQUFBRjlBUUlEQUFRUkJSSWhNVUVHRTFGaEJ5SnhGREtCa2FFSUkwS3h3UlZTMGZBa00ySnlnZ2tLRmhjWUdSb2xKaWNvS1NvME5UWTNPRGs2UTBSRlJrZElTVXBUVkZWV1YxaFpXbU5rWldabmFHbHFjM1IxZG5kNGVYcURoSVdHaDRpSmlwS1RsSldXbDVpWm1xS2pwS1dtcDZpcHFyS3p0TFcydDdpNXVzTER4TVhHeDhqSnl0TFQxTlhXMTlqWjJ1SGk0K1RsNXVmbzZlcng4dlAwOWZiMytQbjYvOFFBSHdFQUF3RUJBUUVCQVFFQkFRQUFBQUFBQUFFQ0F3UUZCZ2NJQ1FvTC84UUF0UkVBQWdFQ0JBUURCQWNGQkFRQUFRSjNBQUVDQXhFRUJTRXhCaEpCVVFkaGNSTWlNb0VJRkVLUm9iSEJDU016VXZBVlluTFJDaFlrTk9FbDhSY1lHUm9tSnlncEtqVTJOemc1T2tORVJVWkhTRWxLVTFSVlZsZFlXVnBqWkdWbVoyaHBhbk4wZFhaM2VIbDZnb09FaFlhSGlJbUtrcE9VbFphWG1KbWFvcU9rcGFhbnFLbXFzck8wdGJhM3VMbTZ3c1BFeGNiSHlNbkswdFBVMWRiWDJObmE0dVBrNWVibjZPbnE4dlAwOWZiMytQbjYvOW9BREFNQkFBSVJBeEVBUHdEdU5YOFQ2cGEzODBFTXlyR2pZVUdOVC9TcUI4WDZ5UDhBbDRUL0FMOUwvaFVYaUZUL0FHeGNmNzlZaktjbXZOcVZhaWswbWZUNFhDVUpVMDNGRzkvd21PdGY4L0NmOStsL3dwUCtFeTF2UEZ5di9mcGY4SzUvSGIrVk1QU3N2YlZPNTFyQTRmOEFrUjBQL0NaNjMvejlEL3YwbitGTi93Q0UwMXYvQUovQi93QitrL3dybmUvV3FkNXFkclk0RTh1R1BJVURKcCsxcWRHSjRQQ3hWM0ZIWWY4QUNaYTUvd0Evbi9rSlA4S2FmR091OXIwRC90a24rRmVkeWVLNHdTSXJaaU94WnNmcC93RFhxczNpeVRQRVVZSDRtbnpWbjFaeU40S0xzMHZ1UFRmK0V4MXcvd0RMOS81QlQvQ2svd0NFdTF6UC9IOGYrL1NmL0UxNTFENHJqUDhBclljRHVVYlA2VnJXbXFXdDR1WXBBV0hWVHdSVXVwVlc3WnJTbzRPcDhLUjEvd0R3bDJ0LzgvN2Y5KzAvd3AzL0FBbDJ0SHJmdm4vZFgvQ3ViRGpIQnA0TlQ3V2ZjNnZxZEQrUmZjZEFmRStzNC80LzVQeUgrRk1QaWJXZitnaEwrbitGWWVhTThVL2F6N2g5VW9meXI3anRmQ210WDkzcTRpdWJoNVl6R3gydGpyUldiNE1iYnJ5Zy93RFBOcUs3S2JsS043bnoyTXBSaldhaXRDVHhBRC9iTjEvdjFoc0R6Vzk0aEgvRTV1UDkrc053SzVxdnhNOXpDZndvK2hDVDcxRXhIdlVwcXU5WkhZakoxblZCWVFiVVA3NXZ1ajBIclhKSlozbW95R1FaSUp5V0o2MXFYU0hVOVZjc0Q1YW5iK0FyZXRJWTRsVlFPQUswNWxCYWJuallweXF6YWZ3bzVJK0hyL2RnS0NNZGMwSHd6ZjhBWUwrSnIwS0lMamppbk1xNTc0cWxWa2NFc1BDNTU2bmhxK09keFFmUTVxdExZWHVtc3NqQWdBOE1wcjBtUW9LejdtR09aQ0dVRUVZSUlvZFdYVWFveFdzWFpsTFI3OFh0cGx6KzhYaGgvV3RZZE9wcm1iZUgrejlWajhza1J5SFlSMjU2VjB5cU1kYXdrbGZRK2d3bFYxS2Z2Ym9jQnhtbDdZb0E5S2NPdkJvc2RCMEhnM0ExeVAzamIrVkZMNFA0MTJQL0FIRy9sUlhvVWZnUG5NZi9BQm1XZkVPUDdZdXVnK2IrbFliOUszdkVPUDdYdU0vM3Y2Vno4aEdhNWF2eE05YkNmd28raEN4RlZwRDF4VTcvQUpWWGt3UVFlaDYxa2RpT2FnamFHNW5SMUlZU0hqMjdWcXhuYUZabkMvVTRxbk5Ec3UyQ0lGUHNPdFJ0RmRNeklWUkZLL0t6ak9UNlZPcmtlWldTaXJHNUhlMjZESm5pL3dDK3hVbjJ5Qmp3MmZwWE1RYVRjdkVaV2tVU0J2bWpVRENqMXlPUHdyV3M3VXZia2x1Uit0VzdyWTRrK2JjczNHcDI4WXdTeCtnNXFCYnlPUmNySE1vUDhUSmdWVy9zMXAyWjl4T004WXlRZTNIY1UxTk92SGl3WGw4NHQyakNvcS9rQ1RSMDFKdjcyaEhNQTgwTEVqYUpSeit0YnlFRkFRZUNLeHBiWm92a1pqbHZsSkhYbml0ZUpSSEVxcU1CUUFLaStsajFzSjFKUnlLVVVnL0tuVlIyblFlRWNmMjlEL3V0L0tpazhKSC9BSW44SCs2K1B5b3J2by9BZk40LytPeTU0a3ovQUcxYzgveGYwcm41TTEwUGlQOEE1QzkxL3ZmMHJucE9sY3RYNG1ldmcvNE1mUXJNY1ZBN0gxcWR4elZaODRySTdFVTdwRHZXUmZwV2paekkwQTNJRGpyVlNWZHlFWi9Pb1lYMjRwYk81eVlxQzNMOTFLdXpaR09TY1k3VkxaMlUzMlovM2lLVDJ6MXFuTTBjc1hsc0FRdzVxRkxOVmp3a3BWUjIzai9Hblp2VTg3bVVkQzBydGJ6NFlLUWVoQnEyYjFGak9PS3lJNG9JSjJkZHU0OVRubW55eXFVR0NEVGQwaUUxSmpkNW52TW5vTW1ydzZWU3RVKzlJUjFHQlYwQWVsWnBIczRlTm9JWG1qSm9HTVUzUFByVm01MEhoQnYrS2d0eGpzLy9BS0NhS1o0UHovd2tOdjhBUi84QTBFMFYzVWZnUG5jdy9qZkkxdkV2L0ladU9PNC9sWFBTWTlxNm5YYks0dWRjblNDR1NSaVI5MEVqcCtRcU8xOEYzcytHbktXNi93QjM3emZweCt0Uk9sS1VuWkhYaDhWU3BVbzg4cmFISU4xSXA5cnBWN3FEQVd0ckpKbnVCeCtmU3ZTN0x3bHB0cGgyVHo1UjBhWGtmbDByYlJWR05vMmpIVEhTdFlZVCtabU5iT1l4MHBxL3FlTVgxakZwY25sNmpkeHJPQmsyMEo4eVFmWHN2WHVmb0RXTkdtRXlSa2R2YXUyOGRhVUlkVWt1dHY4QXJ5R3pnZmordjlLNU1xQXVPS3lxVTRwMlNNUHJ0U3NyeVpVTWFsc2tiaDlTUDVWSURwWUh6MmtwZjJMNC9Tb3Bsa1RMUnNENmlxVFhrd09DZy9BNHJKcTJ4Q25ycWFqdFpZMndXU3BucVdVbitkTmd0dnRGeEZFdjNwSkFvSDFPS3B4eXpTY3NOb3JiOFBXelhPdVdVWUJiOTZyRWRlQWNuK1ZWR0hNN01sMWVYM2thc25oalVFM0NKWTVkbzVXTnZtSDRIbjhzMW5QQkpDeFNSR1JoMVZnUVJYcUJ0Z21wSzQ0QnlHeCtCcS9kNlpaMzhPeTZnU1JjZCtvK2g2MTF6d1ViZTZ6V2puRWxwVWpwNUhqaFUwbXcxM1dxZUNpcU5OcDhqU0RyNVQ0eitCL3hya3BiU1dDUXBKR3lPT3FzTUVWd3pvU2h1ZXpoOFhTcnE4R2FYaEpTTmV0K01jTi82Q2FLbDhMcnQxMjMvd0NCZitnbWl1cWw4SjVHUC9qTTlQNkdpbGJyeFRjMTNvOEJ0aFJSUlRFVTlUMHkyMWF5ZTF1VkpWdWpMOTVUNml2Tk5jOElhbHB1NTBpTnpBT2trS2s0K3E5Ui9MM3IxYkJ6bm5tblZsT2xHZTVyVHF5ZzlENTRtWm84NzE0RlVUTkdYKzlYMFJkNlRwMS91TjFaVzh4YmdzOFl6K2ZXc3lMd2g0YnM1REl1bDJvWmoveTFHLzhBTGRuOUs1L3FubWRIMXZ5UEhkTjArLzFOd21uMmMxeG4rSlYrUWZWandQeE5lcGVFL0IvOWk3cm04a1dhOFliUnMrNGc5Qm5rNTQ1TmRYRkJGQ29XTkFxZ1lBSFFWSlcxT2hHR3BoVXJ5bm9RK1NBUWNESU9lYWxQQzVOTDNwcllLSFBwVzVoY0Y2Y2RLcDMybDJlcEp0dVlnK09qWnd3L0VWY1RsUWZXblVtazl5b1ZKUWQ0dXpPZjAvd3ZCWWFsRGRRVE9WUW5LUGc5UWVob3JvMSsrS0t6NUVqZVZhYzN6VGVvMDgwbmVqdlZXMmtMelRCbUdWT01lbGFwSE0zcVdxV2twYVF3b29vb0FTbWxRVDB6L1NuYzU1QXgyb3BpRUhURkxSU1VnRnBvQUJQWG4zb1pnb3l4d1BVMEtkd3lNOCtveFFBeUFNc1FWdXFraXBhcVQzME1FNlFrNWVUN3FqcWY4NHEwTTQ1cGtyc1BqLzFnb3BJL3ZpaW9ackhZZjVMZW9xSkxQeTVaWkEzTWhCUHRpaWlsek1mS2g0aGt4OHpxVDdLZjhhUEtteHhKSC8zd2Y4YUtLTHNPVkNKRyszOTQ2czNxcTRIOHpVbmtuMW9vbzVtUGxRbmtjNU9NMHZrZjdWRkZMbVljcUY4ci9hbzhrZXBvb281bUhLakhoMGhvdFZrdnZ0c3orWU1ORzZxUUI3SEdSK0hGYkhsRDFORkZITXhjcU0yMjBhRzNuYTRhVjVaaU51OThjRDBIcFdnSVFQNGlmclJSVHV4Y3FIaU1BNXllS0tLS1JWa2YvOWs9ZAIDDw8WBB4EVGV4dAUVT0dCVSBLSU5HU0xFWSBLQVNJLi4uHgdUb29sVGlwBRdPR0JVIEtJTkdTTEVZIEtBU0lFTU9CSWRkZJ7ZZ/o52yOmph74ggBJEoV4hvFN/elrUJgPDSepe1zQ">
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="B543B226">
+</div>
+    
+
+    <header>
+
+        <!-- Sidebar navigation -->
+        <div id="slide-out" class="side-nav sn-bg-4 fixed" style="background-image: url(&quot;img/logo2.jpg&quot;); transform: translateX(-100%);">
+            <ul class="custom-scrollbar list-unstyled ps ps--theme_default ps--active-y" style="max-height:100vh" data-ps-id="25b61553-377b-759f-0329-eeebbe40d391">
+                <!-- Logo -->
+                <li class="" style="height: 100px">
+                    <div class="text-center">
+                        <div style="width: 93px; margin: 3px auto">
+                            <a class="pl-0" href="https://unnportal.unn.edu.ng/dashboard.aspx#" style="width: 100%">
+                                <img src="data:image/png;base64,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" id="IMG1" style="width: 100%; height: 93px; border-radius: 4px" alt="Profile Pics">
+                            </a>
+
+                        </div>
+
+                    </div>
+                </li>
+                
+	            <li>
+		
+	                <div style="text-align: center; margin-top: 5px">
+                        <span id="lblFullnames" title="OGBU KINGSLEY KASIEMOBI" style="padding: 2px;background-color: #6b6969;box-shadow: 1px 1px 5px #191a1b;font-weight: bold;">OGBU KINGSLEY KASI...</span>
+		       
+	                </div>
+	            </li>
+                <!--/. Logo -->
+
+                <!-- Side navigation links -->
+                <li>
+                    <ul id="side-menu" class="collapsible collapsible-accordion">
+						    <li id="menu-item-59439" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-59439"><a class="collapsible-header waves-effect arrow-r scroller"><i class="fa fa-user"></i>PROFILE<i class="fa fa-angle-down rotate-icon"></i></a>
+		                        <div class="collapsible-body">
+			                        <ul class="sub-menu">
+				                        
+                                        <li id="menu-item-59452" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home  menu-item-59452"><a class="collapsible-header waves-effect" id="link-menu-item-59452" href="https://unnportal.unn.edu.ng/ChangePassword.aspx" target="main">Change Password</a>
+                                        </li>
+                                        <li id="menu-item-59452" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home  menu-item-59452"><a class="collapsible-header waves-effect" id="link-menu-item-59452" href="https://unnportal.unn.edu.ng/modules/ProfileDetails/Biodata.aspx" target="main">Student Profile Details</a>
+                                        </li>
+			                        </ul>
+		                        </div>
+	                        </li>
+                            
+						    <li id="menu-item-59439" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-59439"><a class="collapsible-header waves-effect arrow-r scroller"><i class="fa fa-graduation-cap"></i>ADMISSIONS<i class="fa fa-angle-down rotate-icon"></i></a>
+		                        <div class="collapsible-body">
+			                        <ul class="sub-menu">
+				                        
+                                        <li id="menu-item-59452" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home  menu-item-59452"><a class="collapsible-header waves-effect" id="link-menu-item-59452" href="https://unnportal.unn.edu.ng/PUTMESlip.aspx" target="main">Reprint PUTME Result Slip</a>
+                                        </li>
+                                        <li id="menu-item-59452" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home  menu-item-59452"><a class="collapsible-header waves-effect" id="link-menu-item-59452" href="https://unnportal.unn.edu.ng/modules/Admission/ConfirmAdmissionDefault.aspx" target="main">Confirm Admission Status</a>
+                                        </li>
+			                        </ul>
+		                        </div>
+	                        </li>
+                            
+						    <li id="menu-item-59439" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-59439"><a class="collapsible-header waves-effect arrow-r scroller"><i class="fa fa fa-file-pdf-o"></i>ACCEPTANCE<i class="fa fa-angle-down rotate-icon"></i></a>
+		                        <div class="collapsible-body">
+			                        <ul class="sub-menu">
+				                        
+                                        <li id="menu-item-59452" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home  menu-item-59452"><a class="collapsible-header waves-effect" id="link-menu-item-59452" href="https://unnportal.unn.edu.ng/modules/SchoolFees/getinvoice.aspx?idx=ACPT" target="main">Get Acceptance Invoice</a>
+                                        </li>
+                                        <li id="menu-item-59452" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home  menu-item-59452"><a class="collapsible-header waves-effect" id="link-menu-item-59452" href="https://unnportal.unn.edu.ng/modules/Acceptance/LoginAcceptance.aspx" target="main">Pay Acceptance Fee</a>
+                                        </li>
+                                        <li id="menu-item-59452" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home  menu-item-59452"><a class="collapsible-header waves-effect" id="link-menu-item-59452" href="https://unnportal.unn.edu.ng/modules/Acceptance/ReprintAcceptanceLetter.aspx" target="main">Reprint Acceptance Letter</a>
+                                        </li>
+			                        </ul>
+		                        </div>
+	                        </li>
+                            
+						    <li id="menu-item-59439" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-59439"><a class="collapsible-header waves-effect arrow-r scroller"><i class="fa fa-credit-card"></i>SCHOOL FEES<i class="fa fa-angle-down rotate-icon"></i></a>
+		                        <div class="collapsible-body">
+			                        <ul class="sub-menu">
+				                        
+                                        <li id="menu-item-59452" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home  menu-item-59452"><a class="collapsible-header waves-effect" id="link-menu-item-59452" href="https://unnportal.unn.edu.ng/modules/SchoolFees/ReprintInvoice.aspx" target="main">Reprint Fees Invoice</a>
+                                        </li>
+                                        <li id="menu-item-59452" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home  menu-item-59452"><a class="collapsible-header waves-effect" id="link-menu-item-59452" href="https://unnportal.unn.edu.ng/modules/SchoolFees/ReprintSchoolFeesRecipt.aspx" target="main">School Fees History</a>
+                                        </li>
+                                        <li id="menu-item-59452" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home  menu-item-59452"><a class="collapsible-header waves-effect" id="link-menu-item-59452" href="https://unnportal.unn.edu.ng/modules/SchoolFees/getinvoice.aspx?idx=SCHF" target="main">Get School Fees Invoice</a>
+                                        </li>
+                                        <li id="menu-item-59452" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home  menu-item-59452"><a class="collapsible-header waves-effect" id="link-menu-item-59452" href="https://unnportal.unn.edu.ng/modules/SchoolFees/payschoolfees.aspx" target="main">Pay School Fees</a>
+                                        </li>
+			                        </ul>
+		                        </div>
+	                        </li>
+                            
+						    <li id="menu-item-59439" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-59439"><a class="collapsible-header waves-effect arrow-r scroller"><i class="fa fa-home"></i>HOSTEL ALLOCATION<i class="fa fa-angle-down rotate-icon"></i></a>
+		                        <div class="collapsible-body">
+			                        <ul class="sub-menu">
+				                        
+                                        <li id="menu-item-59452" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home  menu-item-59452"><a class="collapsible-header waves-effect" id="link-menu-item-59452" href="https://unnportal.unn.edu.ng/Modules/Hostel/HostelArrears.aspx" target="main">Pay Hostel Arrears</a>
+                                        </li>
+                                        <li id="menu-item-59452" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home  menu-item-59452"><a class="collapsible-header waves-effect" id="link-menu-item-59452" href="https://unnportal.unn.edu.ng/modules/hostel/HostelDocument.aspx" target="main">Print Hostel/Off-Campus Documentation</a>
+                                        </li>
+			                        </ul>
+		                        </div>
+	                        </li>
+                            
+						    <li id="menu-item-59439" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-59439 active"><a class="collapsible-header waves-effect arrow-r scroller active"><i class="fa fa fa-file-pdf-o"></i>COURSE REGISTRATION<i class="fa fa-angle-down rotate-icon"></i></a>
+		                        <div class="collapsible-body" style="display: block;">
+			                        <ul class="sub-menu">
+				                        
+                                        <li id="menu-item-59452" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home  menu-item-59452"><a class="collapsible-header waves-effect" id="link-menu-item-59452" href="https://unnportal.unn.edu.ng/modules/CourseRegistration/RegisterCourseLogin.aspx" target="main">Register Courses</a>
+                                        </li>
+                                        <li id="menu-item-59452" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home  menu-item-59452"><a class="collapsible-header waves-effect" id="link-menu-item-59452" href="https://unnportal.unn.edu.ng/modules/courseregistration/ReprintCourseReg.aspx" target="main">Reprint Course Reg</a>
+                                        </li>
+                                        <li id="menu-item-59452" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home  menu-item-59452"><a class="collapsible-header waves-effect" id="link-menu-item-59452" href="https://unnportal.unn.edu.ng/Modules/Results/Professionals/RegisterProfessionalExam.aspx" target="main">Register Professional Exams</a>
+                                        </li>
+			                        </ul>
+		                        </div>
+	                        </li>
+                            
+						    <li id="menu-item-59439" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-59439"><a class="collapsible-header waves-effect arrow-r scroller"><i class="fa fa-share-alt"></i>ELEARNING<i class="fa fa-angle-down rotate-icon"></i></a>
+		                        <div class="collapsible-body">
+			                        <ul class="sub-menu">
+				                        
+                                        <li id="menu-item-59452" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home  menu-item-59452"><a class="collapsible-header waves-effect" id="link-menu-item-59452" href="https://unnportal.unn.edu.ng/elms/modules/E-learning/DownloadNotes.aspx" target="main">Access Lecture Resources</a>
+                                        </li>
+                                        <li id="menu-item-59452" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home  menu-item-59452"><a class="collapsible-header waves-effect" id="link-menu-item-59452" href="https://unnportal.unn.edu.ng/elms/modules/E-learning/StudentEnterVirtualClass.aspx" target="main">Join Virtual Class</a>
+                                        </li>
+			                        </ul>
+		                        </div>
+	                        </li>
+                            
+						    <li id="menu-item-59439" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-59439"><a class="collapsible-header waves-effect arrow-r scroller"><i class="fa fa-credit-card"></i>OTHER PAYMENTS<i class="fa fa-angle-down rotate-icon"></i></a>
+		                        <div class="collapsible-body">
+			                        <ul class="sub-menu">
+				                        
+                                        <li id="menu-item-59452" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home  menu-item-59452"><a class="collapsible-header waves-effect" id="link-menu-item-59452" href="https://unnportal.unn.edu.ng/Modules/handbook/GetHandBook.aspx" target="main">Generate Handbook</a>
+                                        </li>
+                                        <li id="menu-item-59452" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home  menu-item-59452"><a class="collapsible-header waves-effect" id="link-menu-item-59452" href="https://unnportal.unn.edu.ng/Modules/ConvocationLevy/GetInvoice.aspx" target="main">Pay Convocation Levy</a>
+                                        </li>
+                                        <li id="menu-item-59452" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home  menu-item-59452"><a class="collapsible-header waves-effect" id="link-menu-item-59452" href="https://unnportal.unn.edu.ng/Modules/DEVerification/GetInvoice.aspx" target="main">Direct Entry Verification</a>
+                                        </li>
+			                        </ul>
+		                        </div>
+	                        </li>
+                            
+						    <li id="menu-item-59439" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-59439"><a class="collapsible-header waves-effect arrow-r scroller"><i class="fa fa fa-file-text"></i>RESULTS<i class="fa fa-angle-down rotate-icon"></i></a>
+		                        <div class="collapsible-body">
+			                        <ul class="sub-menu">
+				                        
+                                        <li id="menu-item-59452" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home  menu-item-59452"><a class="collapsible-header waves-effect" id="link-menu-item-59452" href="https://unnportal.unn.edu.ng/modules/results/CheckResults.aspx" target="main">View Results</a>
+                                        </li>
+                                        <li id="menu-item-59452" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home  menu-item-59452"><a class="collapsible-header waves-effect" id="link-menu-item-59452" href="https://unnportal.unn.edu.ng/Modules/Results/Professionals/DisplayProfessionalResult.aspx" target="main">Check Professional Results</a>
+                                        </li>
+                                        <li id="menu-item-59452" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home  menu-item-59452"><a class="collapsible-header waves-effect" id="link-menu-item-59452" href="https://unnportal.unn.edu.ng/Modules/Results/getResultInvoice.aspx" target="main">Get Result Checking Invoice</a>
+                                        </li>
+			                        </ul>
+		                        </div>
+	                        </li>
+                            
+						    <li id="menu-item-59439" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-59439"><a class="collapsible-header waves-effect arrow-r scroller"><i class="fa fa-windows"></i>Education Service Charge<i class="fa fa-angle-down rotate-icon"></i></a>
+		                        <div class="collapsible-body">
+			                        <ul class="sub-menu">
+				                        
+                                        <li id="menu-item-59452" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home  menu-item-59452"><a class="collapsible-header waves-effect" id="link-menu-item-59452" href="https://unnportal.unn.edu.ng/Modules/LaptopAcquisation/Laptop_Fees_Default.aspx" target="main">Pay for Laptop Acquisition</a>
+                                        </li>
+                                        <li id="menu-item-59452" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home  menu-item-59452"><a class="collapsible-header waves-effect" id="link-menu-item-59452" href="https://unnportal.unn.edu.ng/Modules/LaptopAcquisation/LaptopBalance/BalanceDefault.aspx" target="main">Generate Laptop Balance</a>
+                                        </li>
+			                        </ul>
+		                        </div>
+	                        </li>
+                            
+						    <li id="menu-item-59439" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-59439"><a class="collapsible-header waves-effect arrow-r scroller"><i class="fa fa fa-file-pdf-o"></i>REPARATION<i class="fa fa-angle-down rotate-icon"></i></a>
+		                        <div class="collapsible-body">
+			                        <ul class="sub-menu">
+				                        
+                                        <li id="menu-item-59452" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home  menu-item-59452"><a class="collapsible-header waves-effect" id="link-menu-item-59452" href="https://unnportal.unn.edu.ng/modules/Reparation/getinvoice.aspx?idx=REPA" target="main">Reparation Fee</a>
+                                        </li>
+			                        </ul>
+		                        </div>
+	                        </li>
+                            
+						    <li id="menu-item-59439" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-59439"><a class="collapsible-header waves-effect arrow-r scroller"><i class="fa fa-wifi"></i>UNN HOTSPOT<i class="fa fa-angle-down rotate-icon"></i></a>
+		                        <div class="collapsible-body">
+			                        <ul class="sub-menu">
+				                        
+                                        <li id="menu-item-59452" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home  menu-item-59452"><a class="collapsible-header waves-effect" id="link-menu-item-59452" href="https://unnportal.unn.edu.ng/Modules/HotSpot/GenerateHotspotPassword.aspx" target="main">Your Hotspot Login Details</a>
+                                        </li>
+			                        </ul>
+		                        </div>
+	                        </li>
+                            
+						    <li id="menu-item-59439" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-59439"><a class="collapsible-header waves-effect arrow-r scroller"><i class="fa fa-credit-card"></i>CLEARANCE<i class="fa fa-angle-down rotate-icon"></i></a>
+		                        <div class="collapsible-body">
+			                        <ul class="sub-menu">
+				                        
+                                        <li id="menu-item-59452" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home  menu-item-59452"><a class="collapsible-header waves-effect" id="link-menu-item-59452" href="https://unnportal.unn.edu.ng/modules/schoolclearance/ViewClearanceStatus.aspx" target="main">View Clearance</a>
+                                        </li>
+                                        <li id="menu-item-59452" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home  menu-item-59452"><a class="collapsible-header waves-effect" id="link-menu-item-59452" href="https://unnportal.unn.edu.ng/modules/Clearance/Form03.aspx" target="main">Download Form 03</a>
+                                        </li>
+                                        <li id="menu-item-59452" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home  menu-item-59452"><a class="collapsible-header waves-effect" id="link-menu-item-59452" href="https://unnportal.unn.edu.ng/modules/Clearance/Admission.aspx" target="main">Download Authority to serve as Admission Letter</a>
+                                        </li>
+                                        <li id="menu-item-59452" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home  menu-item-59452"><a class="collapsible-header waves-effect" id="link-menu-item-59452" href="https://unnportal.unn.edu.ng/modules/Clearance/Form2.aspx" target="main">Download Letter of Undertaking</a>
+                                        </li>
+                                        <li id="menu-item-59452" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home  menu-item-59452"><a class="collapsible-header waves-effect" id="link-menu-item-59452" href="https://unnportal.unn.edu.ng/modules/Clearance/REG01.aspx" target="main">Download Acceptance of Offer of Admission </a>
+                                        </li>
+                                        <li id="menu-item-59452" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home  menu-item-59452"><a class="collapsible-header waves-effect" id="link-menu-item-59452" href="https://unnportal.unn.edu.ng/modules/Clearance/Form04.aspx" target="main">Download Checking of Credentials</a>
+                                        </li>
+                                        <li id="menu-item-59452" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home  menu-item-59452"><a class="collapsible-header waves-effect" id="link-menu-item-59452" href="https://unnportal.unn.edu.ng/modules/Clearance/SIF.aspx" target="main">Download SIF</a>
+                                        </li>
+			                        </ul>
+		                        </div>
+	                        </li>
+                            
+						    <li id="menu-item-59439" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-59439"><a class="collapsible-header waves-effect arrow-r scroller"><i class="fa fa-lock"></i>SIGN OUT<i class="fa fa-angle-down rotate-icon"></i></a>
+		                        <div class="collapsible-body">
+			                        <ul class="sub-menu">
+				                        
+                                        <li id="menu-item-59452" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home  menu-item-59452"><a class="collapsible-header waves-effect" id="link-menu-item-59452" href="https://unnportal.unn.edu.ng/logout_processor.htm" target="main">Close Application</a>
+                                        </li>
+			                        </ul>
+		                        </div>
+	                        </li>
+                            </ul>
+                </li>
+                <!-- /. Side navigation links -->
+            <div class="ps__scrollbar-x-rail" style="left: 0px; bottom: -56px;"><div class="ps__scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__scrollbar-y-rail" style="top: 56px; height: 625px; right: 0px;"><div class="ps__scrollbar-y" tabindex="0" style="top: 46px; height: 513px;"></div></div></ul>
+            <div class="sidenav-bg mask-strong"></div>
+        </div>
+
+
+
+        <!-- Navbar-->
+        <nav class="navbar fixed-top navbar-expand-md navbar-light white double-nav scrolling-navbar top-nav-collapse" style="background-image: url(&#39;img/header_bg.jpg&#39;);background-size: cover;">
+            <!-- SideNav slide-out button -->
+            <div class="float-left">
+                <a href="https://unnportal.unn.edu.ng/dashboard.aspx#" data-activates="slide-out" class="button-collapse" style="color: white"><i class="fa fa-bars"></i></a>
+            </div>
+            <div class="float-left" style="margin: 0px 15px">
+                <div style="width: 50%; margin: 0px auto">
+                    <a class="pl-0" href="https://unnportal.unn.edu.ng/dashboard.aspx#" style="width: 100%">
+                        <img id="MDB-logo" src="./Dash Board_files/logo_small.png" style="width: 100%" alt="UNN">
+                    </a>
+
+                </div>
+            </div>
+            <div class="float-left">
+                <span class="name-full" style="font-weight: bold">University of Nigeria</span>
+                <span class="name-short" style="font-weight: bold;">UNN</span>
+            </div>
+           
+            <div>
+            <script src="./Dash Board_files/cb=gapi.loaded_2" async=""></script><script src="./Dash Board_files/cb=gapi.loaded_1" async=""></script><script src="./Dash Board_files/cb=gapi(1).loaded_0" async=""></script><script src="./Dash Board_files/platform.js.download" gapi_processed="true"></script>
+            <div id="___ytsubscribe_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 110px; height: 24px;"><iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 110px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 24px;" tabindex="0" vspace="0" width="100%" id="I0_1698659952966" name="I0_1698659952966" src="./Dash Board_files/subscribe_embed.html" data-gapiattached="true"></iframe></div>
+        </div>
+
+            <!--Navigation icons-->
+
+            <ul class="nav navbar-nav nav-flex-icons ml-auto">
+                
+                <li class="dropdown">
+                    <a class="nav-link dropdown-toggle waves-effect waves-light" style="color: white" href="https://unnportal.unn.edu.ng/dashboard.aspx#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Profile
+					</a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item waves-effect waves-light" target="main" href="https://unnportal.unn.edu.ng/ChangePassword.aspx">Change Password</a>
+						<a class="dropdown-item waves-effect waves-light" href="https://unnportal.unn.edu.ng/logout_processor.htm">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.Navbar-->
+    </header>
+
+
+    <!-- Main layout-->
+    <main>
+        <iframe name="main" id="main" src="./Dash Board_files/Welcome.html" onload="resizeIframe(this)" style="width: 96%; margin-right:2%!important; margin-left:2%!important" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" height="958px"></iframe>
+    </main>
+
+    <!-- /.Main layout-->
+
+    <!--Footer-->
+    <footer id="footer" class="page-footer unique-color-dark mt-4">
+
+        <!-- Copyright-->
+        <div class="footer-copyright py-3 text-center">
+            Copyright ©<script>document.write(new Date().getFullYear()); </script>2023
+            <a href="https://unn.edu.ng/" target="_blank">
+                <strong>University of Nigeria</strong>
+            </a>
+        </div>
+        <!--/.Copyright -->
+    </footer>
+    <!--/.Footer-->
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="./Dash Board_files/jquery-3.3.1.min.js.download"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="./Dash Board_files/popper.min.js.download"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="./Dash Board_files/bootstrap.min.js.download"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="./Dash Board_files/mdb.min.js.download"></script>
+
+    <script>
+        var ps = null;
+        var el = null;
+        (function($) {
+            // SideNav init
+            $(".button-collapse").sideNav();
+            el = document.getElementsByClassName('custom-scrollbar')[0];
+            Ps.initialize(el);
+
+
+            $('.scroller').on('click', function(){
+
+                setTimeout(function(){
+                    window.Ps.update(el)
+                }, 500)
+
+            })
+
+        })(jQuery);
+
+        function resizeIframe(iframe) {
+            iframe.height = iframe.contentWindow.document.body.scrollHeight + 100 + "px";
+
+        }
+
+        //var ps = new PerfectScrollbar(container);
+    </script>
+
+
+    </form><div class="drag-target" style="left: 0px; touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div>
+
+
+<div class="hiddendiv common"></div><iframe name="oauth2relay587766178" id="oauth2relay587766178" src="./Dash Board_files/postmessageRelay.html" tabindex="-1" aria-hidden="true" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe><div style="display: block; visibility: hidden; position: absolute; width: 106px; left: -10000px; top: -10000px;"><table cellpadding="0" cellspacing="0" dir="ltr" style="width:106px;" frame="void" rules="none" class=" gc-bubbleDefault pls-container"><tbody><tr class="gc-reset"><td class="pls-topLeft gc-reset"><img class="gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="./Dash Board_files/border_3.gif"></td><td class="pls-topTail gc-reset"><img class="pls-tailbottom gc-reset" style="width:15px !important; height:9px !important; max-width: 15px !important; max-height: 9px !important;" src="./Dash Board_files/spacer.gif"><img class="pls-spacerbottom gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="./Dash Board_files/spacer.gif"></td><td class="pls-topRight gc-reset"><img class="gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="./Dash Board_files/border_3.gif"></td></tr><tr class="gc-reset"><td class="pls-vertShimLeft gc-reset"><img class="gc-reset" style="width:1px !important; height:4px !important; max-width: 1px !important; max-height: 4px !important;" src="./Dash Board_files/spacer.gif"></td><td class="pls-vertShim gc-reset"><img class="gc-reset" style="width:1px !important; height:4px !important; max-width: 1px !important; max-height: 4px !important;" src="./Dash Board_files/spacer.gif"></td><td class="pls-vertShimRight gc-reset"><img class="pls-dropTR gc-reset" style="width:5px !important; height:4px !important; max-width: 5px !important; max-height: 4px !important;" src="./Dash Board_files/spacer.gif"></td></tr><tr class="gc-reset"><td class="pls-contentLeft gc-reset"><img class="pls-tailright gc-reset" style="width:9px !important; height:15px !important; max-width: 9px !important; max-height: 15px !important;" src="./Dash Board_files/spacer.gif"><img class="pls-spacerright gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="./Dash Board_files/spacer.gif"></td><td class="pls-contentWrap gc-reset"><div class="goog-bubble-content gc-reset"><iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="margin:0px;position:absolute;z-index:1;border-style:none;outline:none;width:100px;" tabindex="0" vspace="0" width="100%" id="I0_1698659961319" name="I0_1698659961319" src="./Dash Board_files/subscribe_embed(1).html"></iframe></div></td><td class="pls-dropRight gc-reset"><img class="pls-tailleft gc-reset" style="width:12px !important; height:19px !important; max-width: 12px !important; max-height: 19px !important;" src="./Dash Board_files/spacer.gif"><img class="pls-spacerleft gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="./Dash Board_files/spacer.gif"></td></tr><tr class="gc-reset"><td class="pls-bottomLeft gc-reset"><img class="gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="./Dash Board_files/border_3.gif"></td><td class="gc-reset"><table cellpadding="0" cellspacing="0" style="width:100%" class="gc-reset"><tbody><tr class="gc-reset"><td class="pls-vert gc-reset"><img class="pls-dropBL gc-reset" style="width:4px !important; height:5px !important; max-width: 4px !important; max-height: 5px !important;" src="./Dash Board_files/spacer.gif"></td><td class="pls-dropBottom gc-reset"><img class="pls-tailtop gc-reset" style="width:19px !important; height:13px !important; max-width: 19px !important; max-height: 13px !important;" src="./Dash Board_files/spacer.gif"><img class="pls-spacertop gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="./Dash Board_files/spacer.gif"></td></tr></tbody></table></td><td class="pls-vert gc-reset"><img class="pls-dropBR gc-reset" style="width:5px !important; height:5px !important; max-width: 5px !important; max-height: 5px !important;" src="./Dash Board_files/spacer.gif"></td></tr></tbody></table></div></body></html>

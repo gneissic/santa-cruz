@@ -1,17 +1,25 @@
 import { Fragment } from "react";
-import NavItems from "../Nav/NavItems";
-import FreeShipping from "../Nav/FreeShipping";
 import CollectionsNav from "../Nav/CollectionsNav";
 import { BsArrowLeft, BsStar, BsTruck } from "react-icons/bs";
-import { Form } from "react-router-dom";
+import { Form, Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { cartActions } from "../../store/cart-slice";
 
 const ProductDetails = ({ data }) => {
   const price = data.price.toFixed(2)
+  const dispatch = useDispatch()
+  const addToCartHandler = ()=>{
+  dispatch(cartActions.addToCart({
+    id:data.id,
+    title: data.title,
+    price: data.price,
+    img:data.img,
+    totalPrice: data.price
+  }))
+  }
   return (
     <Fragment>
-      <NavItems />
-      <FreeShipping />
-
+      
       <div>
         <img
           className="grid place-items-center h-[27rem]"
@@ -40,12 +48,15 @@ const ProductDetails = ({ data }) => {
         <p>In store, ready to ship</p>
       </div>
       <div className="w-[95%] mx-auto mt-[2rem] grid gap-5 pb-5">
-        <button className="w-full  py-4 font-pops border-[2px] border-slate-700">
+        <button  onClick={addToCartHandler} className="w-full  py-4 font-pops border-[2px] border-slate-700">
           ADD TO CART
         </button>
-        <button className="w-full text-white bg-black font-nun py-4">
+        <Link to={"/checkout"}>
+        <button onClick={addToCartHandler} className="w-full text-white bg-black font-nun py-4">
           BUY IT NOW
         </button>
+        </Link>
+        
       </div>
       <div>
         <img
