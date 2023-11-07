@@ -16,7 +16,7 @@ const Root = () => {
    
   return (
     <Fragment> 
-        { navModal && <NavModal nav={hideNavModal} />}
+         <NavModal modal={navModal} nav={hideNavModal} />
     <NavItems  nav={showNavModal} />
      <FreeShipping/>
      <Outlet/>

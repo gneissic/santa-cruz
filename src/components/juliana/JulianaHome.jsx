@@ -7,7 +7,7 @@ const JulianaHome = ({data}) => {
     <div>
         
     <BannerBody img={Banner2} />
-    <div className= "grid gap-7 mt-5 w-[90%] mx-auto">
+    <div className= "grid gap-7 mt-5 w-[90%] mx-auto lg:grid-cols-2 lg:py-4 lg:gap-10">
       {data.map((dat)=>(<JulianaHomepageItems key={dat.id} id={dat.id} img={dat.img} title={dat.title} />))} 
     </div> 
     </div>

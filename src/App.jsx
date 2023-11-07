@@ -75,7 +75,6 @@ import Root from "./components/root";
 
 function App() {
  
-
   const router = createBrowserRouter([
     {path: "/", element: <Root />, children:[{ path: "/", element: <HomePage />, loader: homePageActions }, { path: "pages/bike-model", element: <BikeModelsPage />, loader: bikeLoader},
     { path: "pages/juliana-bike-models", element: <JulianaModelsPage />, loader: julianabikeLoader},
@@ -114,7 +113,6 @@ function App() {
 
   return (
     <>
-     
       <RouterProvider router={router} />
       
     </>

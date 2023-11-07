@@ -1,17 +1,21 @@
-
+import { motion } from "framer-motion";
 
 const ModalMenu = (props) => {
+    const childVariants = {
+        hidden: { y: "50vh",  opacity: 0 , },
+        visible: { y:0 , opacity: 1, transition:{duration:0.5} },
+      }
   return (
     <div>
         <div>
    
-   <div className="font-pops font-semibold text-white text-3xl grid gap-6 pl-[2rem] pt-[3rem]">
+   < motion.div  variants={childVariants} initial="hidden" animate="visible" className="font-pops font-semibold text-white text-3xl grid gap-6 pl-[2rem] pt-[3rem]">
            <p onClick={props.showBikes}>Bikes</p>
            <p onClick={props.showSupport}>Support</p>
            <p onClick={props.showAbout}>About</p>
            <p onClick={props.showGear}>Gear</p>
-       </div>
-       <div className="grid absolute bottom-4 left-12  font-pops font-semibold text-white gap-5  w-[75%] border-t mx-auto   py-5 text-lg tracking-wider text-center">
+       </motion.div>
+       <div className="grid absolute bottom-10 left-12  font-pops font-semibold text-white gap-5  w-[75%] border-t mx-auto   py-5 text-lg tracking-wider text-center">
            <div><p>Bike Registration</p></div>
            <div className="border-t py-3 mt-2"><p className="pt-4">Find a Dealer</p></div>
            <div className="flex justify-center border-y py-7 items-center">

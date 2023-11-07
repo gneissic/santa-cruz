@@ -3,7 +3,7 @@ import { Fragment } from "react";
 const CollectionsNav = (props) => {
   return (
     <Fragment>
-      <div className="flex justify-center gap-2 pt-3 font-pops text-sm">
+      <div className="flex justify-center lg:justify-start gap-2 pt-3 font-pops text-sm">
         <p>Home</p>
         <p>/</p>
         <p>{props.page}</p>
