@@ -26,7 +26,6 @@ const Bikes = () => {
             <h1 className="text-3xl font-pops">{item.title}</h1>
         <p className="font-pops tracking-wide text-sm">{item.para}</p>
          </div> ))}
-        
       </motion.div>
     </Fragment>
   );

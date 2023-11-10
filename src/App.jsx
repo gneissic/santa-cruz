@@ -69,14 +69,14 @@ import {loader as oneUpDetailLoader} from "./pages/oneUpDetail";
 import Cart from "./components/cart/Cart";
 import CheckoutPage from "./pages/CheckoutPage";
 import Root from "./components/root";
-
+import NotFound from "./Error";
 
 
 
 function App() {
  
   const router = createBrowserRouter([
-    {path: "/", element: <Root />, children:[{ path: "/", element: <HomePage />, loader: homePageActions }, { path: "pages/bike-model", element: <BikeModelsPage />, loader: bikeLoader},
+    {path: "/", element: <Root  />,errorElement:<NotFound/>, children:[{ path: "/", element: <HomePage />, loader: homePageActions }, { path: "pages/bike-model", element: <BikeModelsPage />, loader: bikeLoader},
     { path: "pages/juliana-bike-models", element: <JulianaModelsPage />, loader: julianabikeLoader},
     { path: "collections/casual-apparel", element: <ShopCasualPage />, loader:apprelActions},
     { path: "collections/casual-apparel/:casualDetail", element: <ShopCasualDetailPage />, loader:shopCasualDetailLoader},
@@ -107,7 +107,6 @@ function App() {
     { path: "collections/butcher-items", element: <BucherPage />, loader:butcherLoader},
     { path: "collections/butcher-items/:butcherDetail", element: <ButcherDetailPage />, loader:butcherDetailLoader},
     { path: "cart", element: <Cart />},]},
-
     { path: "checkout", element: <CheckoutPage />},
   ]);
 

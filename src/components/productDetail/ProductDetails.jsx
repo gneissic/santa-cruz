@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import CollectionsNav from "../Nav/CollectionsNav";
 import { BsArrowLeft, BsStar, BsTruck } from "react-icons/bs";
 import { Form, Link } from "react-router-dom";
@@ -6,11 +6,13 @@ import { useDispatch } from "react-redux";
 import { cartActions } from "../../store/cart-slice";
 
 
+
 const ProductDetails = ({ data }) => {
-  const [bump, setBumb] = useState(false)
+  const [bump, setBump] = useState(false)
   const price = data.price.toFixed(2);
   const dispatch = useDispatch();
   const addToCartHandler = () => {
+    localStorage.setItem("hasCart", "true")
     dispatch(
       cartActions.addToCart({
         id: data.id,
@@ -21,8 +23,19 @@ const ProductDetails = ({ data }) => {
       })
     );
     
-    setBumb(true)
+    setBump(true)
   };
+  useEffect(() => {
+   const timer =   setTimeout(() => {
+      if (bump) {
+        setBump(false)
+      }
+     }, 200); 
+
+    return () => {
+      clearTimeout(timer)
+    }
+  }, [bump])
   const noBump = " w-full lg:w-[37rem]  py-4 font-pops border-[2px] border-slate-700"
   const bumpButn  = "transform scale-105 transition-transform duration-300 w-full lg:w-[37rem]  py-4 font-pops border-[2px] border-slate-700"
   return (
@@ -136,7 +149,7 @@ const ProductDetails = ({ data }) => {
             <textarea
               className="border border-slate-500 rounded-sm lg:rounded-md"
               name="feedback"
-              cols="162"
+              cols="70"
               rows="5"
             ></textarea>
           </div>

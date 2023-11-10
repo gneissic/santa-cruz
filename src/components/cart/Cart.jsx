@@ -1,12 +1,15 @@
-import { Fragment } from "react";
+import { Fragment, } from "react";
 import { Link } from "react-router-dom";
 import CartItems from "./CartItems";
 import { useSelector } from "react-redux";
 
 const Cart = () => {
+
   const cart = useSelector((state) => state.cart.cartItems);
   const totalAmount = useSelector((state)=> state.cart.totalAmount)
   const subTotal = totalAmount.toFixed(2)
+  
+  
 
   return (
     <Fragment>

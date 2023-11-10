@@ -7,7 +7,7 @@ const TransactionItems = () => {
     const price = totalPrice.toFixed(2)
     const cartItems = useSelector((state)=> state.cart.cartItems)
   return (
-    <div>
+    <div className="lg:w-[50%] lg:border-l lg:h-[100vh] lg:border-gray-300 lg:px-5 lg:bg-white">
      {cartItems.map((cart)=> (<TransactionCart key={cart.id}  quantity={cart.quantity} price={cart.price} title={cart.title}  img={cart.img} />))} 
       <div className="py-5 grid gap-3">
         <div className="flex justify-between px-3 text-md">

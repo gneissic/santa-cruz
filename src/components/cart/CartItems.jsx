@@ -1,5 +1,4 @@
-import { Fragment } from "react";
-import {  } from "@reduxjs/toolkit";
+import { Fragment, } from "react";
 import { useDispatch } from "react-redux";
 import { cartActions } from "../../store/cart-slice";
 
@@ -9,21 +8,22 @@ const CartItems = (props) => {
   const id = props.id
   const price = props.price.toFixed(2)
   const addToCartHandler=()=>{
-    dispatch(cartActions.addToCart({
+     dispatch(cartActions.addToCart({
         id: props.id,
         title:props.title,
         img:props.img,
         price:props.price,
         quantity: props.quantity
     }))
+
   }
   const removeFromCartHandler = ()=>{
     dispatch(cartActions.removeFromCart(id))
   }
-
+  
   return (
     <Fragment>
-      <div className="flex gap-[1rem] w-[95%] mx-auto mt-[3rem] pl-[1rem] text-lg font-pops font-bold py-5 lg:border-b">
+       <div className="flex gap-[1rem] w-[95%] mx-auto mt-[3rem] pl-[1rem] text-lg font-pops font-bold py-5 lg:border-b">
         <div>
           <img src={props.img} className="w-[10rem] h-[8rem] lg:h-[10rem]" alt="" />
         </div>
@@ -41,7 +41,7 @@ const CartItems = (props) => {
             </div>
             <p className="cursor-pointer">Remove</p>
         </div>
-      </div>
+      </div> 
     </Fragment>
   );
 };

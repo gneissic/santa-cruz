@@ -50,12 +50,12 @@ setPhone(e.target.value)
   };
   return (
     <React.Fragment>
-      <div>
-        <div>
+      <div className="">
+        <div className="lg:hidden">
             <h1 className="text-2xl text-black font-pops font-bold capitalize py-[2rem] ml-2">santa cruz bicycles</h1>
         </div>
         <div className="bg-gray-100">
-        <div className="flex justify-between px-[1rem] py-[2rem] border-b border-black/30">
+        <div className="flex justify-between px-[1rem] py-[2rem] border-b border-black/30 lg:hidden">
         <div className="flex items-center gap-2 font-pops text-black ">
             <BsCart/>
             <p>Hide order summary</p>
@@ -63,32 +63,46 @@ setPhone(e.target.value)
         </div>
         <div><p className="font-bold">${useAmount}</p></div>
         </div>
+        <div className="lg:flex justify-evenly flex-row-reverse items-center lg:pt-5">
         <TransactionItems/>
 
-        <Form>
-            <div className="w-[95%] mx-auto">
-                <div>
-                    <h1 className="font-pops font-bold text-black text-lg py-3">Contact</h1>
-                <Input type="email" placeholder="Email" onChange={changeEmailHandler}  name="mail" />
+<Form>
+<div className="hidden lg:block">
+            <h1 className="text-2xl text-black font-pops font-bold capitalize py-[2rem] ml-2">santa cruz bicycles</h1>
+        </div>
+    <div className="w-[95%] lg:w-[40vw] mx-auto">
+        <div>
+            <h1 className="font-pops font-bold text-black text-lg py-3">Contact</h1>
+        <Input type="email" placeholder="Email" onChange={changeEmailHandler}  name="mail" />
 
+        </div>
+        <div>
+            <h1 className="font-pops font-bold text-black text-lg py-3">Shipping address</h1>
+            <div className="grid">
+                <Input  type="text" placeholder="Nigeria" name="country"  />
+                <div className="lg:grid grid-cols-2 lg:gap-5">
+
+                <Input  type="text" placeholder="First name (optional)" name="first"/>
+                <Input  type="text" placeholder="Last name" onChange={changeNameHandler}  name="last" />
                 </div>
-                <div>
-                    <h1 className="font-pops font-bold text-black text-lg py-3">Shipping address</h1>
-                    <div className="grid gap-[0.7rem]">
-                        <Input  type="text" placeholder="Nigeria" name="country"  />
-                        <Input  type="text" placeholder="First name (optional)" name="first"/>
-                        <Input  type="text" placeholder="Last name" onChange={changeNameHandler}  name="last" />
-                        <Input  type="text" placeholder="Address"   name="address" />
-                        <Input  type="text" placeholder="Apartment, suite, e.t.c (optional)" name="apartment" />
-                        <Input  type="text" placeholder="City"  name="city" />
-                        <Input  type="text" placeholder="State"   name="state" />
-                        <Input  type="text" placeholder="Zip code" name="zip-code" />
-                        <Input  type="number" placeholder="phone" onChange={changePhoneHandler} name="phone" />
-                    </div>
+                <Input  type="text" placeholder="Address"   name="address" />
+                <Input  type="text" placeholder="Apartment, suite, e.t.c (optional)" name="apartment" />
+                <div className="lg:flex gap-3">
+                <Input  type="text" placeholder="City"  name="city" />
+                <Input  type="text" placeholder="State"   name="state" />
+                <Input  type="text" placeholder="Zip code" name="zip-code" />
                 </div>
+                
+                <Input  type="number" placeholder="phone" onChange={changePhoneHandler} name="phone" />
             </div>
-        </Form>
-        <PaystackButton  className="bg-black text-white ml-5 w-[90%] my-5  py-3 rounded-md tracking-wide" {...componentProps} />
+        </div>
+    </div>
+</Form>
+        </div>
+        <div className="lg:w-full lg:flex justify-start lg:pl-[3rem]">
+
+        <PaystackButton  className="bg-black text-white ml-5 w-[90%] lg:w-[15%] lg:rounded-sm my-5  py-3 rounded-md tracking-wide" {...componentProps} />
+        </div>
         </div>
         
       </div>
