@@ -71,8 +71,6 @@ import CheckoutPage from "./pages/CheckoutPage";
 import Root from "./components/root";
 import NotFound from "./Error";
 
-
-
 function App() {
  
   const router = createBrowserRouter([

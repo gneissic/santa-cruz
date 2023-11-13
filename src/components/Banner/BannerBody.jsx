@@ -11,9 +11,6 @@ const BannerBody = (props) => {
             </div>
         
         <p className="text-lg text-gray-200 lg:text-end">The ultimate pairing to keep you going and going</p>
-        <div className="flex justify-end">
-        <button className="mr-2 bg-gray-100 text-gray-800 font-pops font-semibold py-2 text-sm w-[65%] lg:w-[30%] rounded-sm">SHOP BOTTLES AND CAGES</button>
-        </div>
         </div>
     </div>
   )

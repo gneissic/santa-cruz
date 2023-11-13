@@ -1,7 +1,7 @@
 import { Fragment, useEffect, useState } from "react";
 import CollectionsNav from "../Nav/CollectionsNav";
 import { BsArrowLeft, BsStar, BsTruck } from "react-icons/bs";
-import { Form, Link } from "react-router-dom";
+import { Form, Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { cartActions } from "../../store/cart-slice";
 
@@ -11,8 +11,97 @@ const ProductDetails = ({ data }) => {
   const [bump, setBump] = useState(false)
   const price = data.price.toFixed(2);
   const dispatch = useDispatch();
+  const navigate = useNavigate()
+  const [name, setName] = useState("");
+  const [mail, setMail] = useState("");
+  const [message, setMessage] = useState("");
+  const [error, setError] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [loaded, setLoaded] = useState(false);
+  const formIsValid = name.length > 1 && mail.length > 1 && message.length >1
+  const enterNameHandler = (e) => {
+    setName(e.target.value);
+  };
+  const enterMailHandler = (e) => {
+    setMail(e.target.value);
+  };
+  const enterMessageHandler = (e) => {
+    setMessage(e.target.value);
+  };
+
+  const onSubmitUserData = async () => {
+    const userData = {
+      name,
+      mail,
+      message,
+    };
+    setIsLoading(true);
+    setLoaded(false);
+    try {
+      const response = await fetch(
+        "https://santa-cruz-64b2d-default-rtdb.firebaseio.com/reviews.json",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(userData),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error(`Request failed ${response.status} `);
+      }
+
+      setIsLoading(false);
+      setLoaded(true);
+      setError(null);
+    } catch (error) {
+      setError("Failed to send review....");
+    }
+    setName("");
+    setMail("");
+    setMessage("");
+  };
+
+  let loading;
+  let sendMessage
+  if (isLoading) {
+    loading = 
+    <button className="w-full lg:w-[25%] bg-black py-3 rounded-md lg:rounded-sm font-pops text-white font-semibold">
+    Submit Review
+  </button>
+  }
+  if (!loading && loaded) {
+    loading = 
+    <button  disabled={!formIsValid} className="disabled:cursor-not-allowed w-full lg:w-[25%] bg-black py-3 rounded-md lg:rounded-sm font-pops text-white font-semibold">
+    Submit Review
+  </button>
+      sendMessage = <div className="w-[80%] m-auto bg-green-300 mt-[4rem] py-3 px-2 font-semibold">
+      <p className="text-center  ">Thanks for the review!</p>
+    </div>
+  }
+  if (!loading && !loaded) {
+    loading =
+    <button disabled={!formIsValid} className=" disabled:cursor-not-allowed w-full lg:w-[25%] bg-black py-3 rounded-md lg:rounded-sm font-pops text-white font-semibold">
+    Submit Review
+  </button>
+  }
+  if (error) {
+    sendMessage = <div className="w-[80%] m-auto bg-red-900 mt-[4rem] py-3 px-2 font-semibold text-white font-pops">
+      <p className="text-center  ">{error}</p>
+    </div>
+    loading =
+    <button  disabled={!formIsValid} className=" disabled:cursor-not-allowed w-full lg:w-[25%] bg-black py-3 rounded-md lg:rounded-sm font-pops text-white font-semibold">
+    Submit Review
+  </button>
+    
+  }
+
+  const changeDirectoryHandler = ()=>{
+    navigate("..")
+  }
   const addToCartHandler = () => {
-    localStorage.setItem("hasCart", "true")
     dispatch(
       cartActions.addToCart({
         id: data.id,
@@ -113,7 +202,7 @@ const ProductDetails = ({ data }) => {
         </div>
        
       </div>
-      <div className="bg-black text-white w-full lg:w-[40%] lg:mx-auto flex items-center justify-center gap-[1rem] py-7 mb-2 mt-[2rem] lg:mt-[4rem]">
+      <div  onClick={changeDirectoryHandler} className=" cursor-pointer bg-black text-white w-full lg:w-[40%] lg:mx-auto flex items-center justify-center gap-[1rem] py-7 mb-2 mt-[2rem] lg:mt-[4rem]">
         <BsArrowLeft className="h-6 w-6" />
         <p>Back To Shop Small Parts</p>
       </div>
@@ -140,15 +229,17 @@ const ProductDetails = ({ data }) => {
             share your thoughts with other customers
           </p>
         </div>
-        <Form>
+        <Form  onSubmit={onSubmitUserData}>
           <h1 className="text-2xl font-bold pt-5 font-pops tracking-wide">
             Write A Review
           </h1>
           <div className="py-2">
             <h1 className="py-2 font-bold font-pops ">Feedback</h1>
             <textarea
+            onChange={enterMessageHandler}
+            value={message}
               className="border border-slate-500 rounded-sm lg:rounded-md"
-              name="feedback"
+              name="feed"
               cols="70"
               rows="5"
             ></textarea>
@@ -158,7 +249,9 @@ const ProductDetails = ({ data }) => {
             <input
               className="w-full border border-gray-500 py-2 lg:py-3 pl-2 font-semibold"
               type="text"
-              name="usename"
+              name="user"
+              onChange={enterNameHandler}
+              value={name}
               placeholder="Enter your name"
             />
           </div>
@@ -168,17 +261,18 @@ const ProductDetails = ({ data }) => {
               className="w-full border border-gray-500 py-2  lg:py-3 pl-2 font-semibold"
               type="text"
               placeholder="Enter your mail"
-              name="mail"
+              name="e-mail"
+              onChange={enterMailHandler}
+              value={mail}
             />
           </div>
           <div className="mt-[2rem] grid gap-3 pb-5 lg:flex lg:justify-start">
-            <button className="w-full lg:w-[25%] bg-black py-3 rounded-md lg:rounded-sm font-pops text-white font-semibold">
-              Submit Review
-            </button>
+            {loading}
             <button className="w-full lg:w-[20%] lg:rounded-sm  py-2  border-[2px] border-slate-700 text-black font-bold font-pops">
               Cancel
             </button>
           </div>
+          {sendMessage}
         </Form>
       </div>
     </Fragment>

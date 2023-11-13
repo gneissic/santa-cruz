@@ -13,7 +13,7 @@ const NotFound = () => {
       >
         <h1 className="text-4xl font-bold text-indigo-700 mb-4">404 - Page Not Found</h1>
         <p className="text-gray-700">
-          Sorry, the page {`you're`} looking for {`doesn't`} exist.
+          Sorry, the page {`you're`} looking for {`doesn't`} exist, or check your internet connection.
         </p>
       </motion.div>
     </div>

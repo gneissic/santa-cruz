@@ -4,6 +4,7 @@ import FreeShipping from "./Nav/FreeShipping"
 import { Outlet } from "react-router-dom"
 import NavModal from "./Nav/NavModal"
 import SignIn from "./account/SignIn"
+import Footer from "./Banner/Footer"
 
 
 const Root = () => {
@@ -38,6 +39,7 @@ const Root = () => {
     <NavItems  nav={showNavModal} showGoogle={showGoogleHandler}  />
      <FreeShipping/>
      <Outlet/>
+     <Footer/>
     </Fragment>
   )
 }

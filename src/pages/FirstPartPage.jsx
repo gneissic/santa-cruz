@@ -5,7 +5,8 @@ import FirstPart from "../components/bikeModelParts/FirstPart"
 const FirstPartPage = () => {
     const data  = useLoaderData()
   return (
-    <div><FirstPart data={data} /></div>
+    <div><FirstPart data={data} />
+    </div>
   )
 }
 

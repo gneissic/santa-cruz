@@ -1,5 +1,5 @@
 import { AnimatePresence, easeIn, motion } from "framer-motion";
-import { Fragment, useState } from "react";
+import { Fragment, useState, useEffect } from "react";
 import { BsCheck, BsGoogle } from "react-icons/bs";
 import {
     signInWithPopup,
@@ -13,6 +13,8 @@ import { authActions } from "../../store/auth-slice";
 const SignIn = (props) => {
   const loggedIn  = useSelector((state)=> state.auth.isLoggedIn)
     const [error, setError] = useState(false)
+    const [userName, setUserName] = useState("")
+    const [img, setImg] = useState("")
     const dispatch = useDispatch()
     const containerVariants = {
         hidden: {opacity: 0},
@@ -23,7 +25,11 @@ const SignIn = (props) => {
         signInWithPopup(auth, googleProvider)
           .then((result) => {
             console.log(result.user);
-            dispatch(authActions.handleLogin(true))
+            dispatch(authActions.handleLogin())
+            const displayName = result.user.displayName
+            const photoUrl = result.user.photoURL
+            setUserName(displayName)
+            setImg(photoUrl)
   
         
           })
@@ -32,7 +38,17 @@ const SignIn = (props) => {
           })
           
       };
-
+      useEffect(() => {
+     const timer  =   setTimeout(() => {
+          dispatch(authActions.handleLogout())
+        }, 5000);
+      
+        return () => {
+          clearTimeout(timer)
+        }
+      }, [dispatch])
+      
+      
 
   return (
     <Fragment>
@@ -58,8 +74,16 @@ const SignIn = (props) => {
       </div>
       <div>
       {loggedIn && <div>
-            <p>You have successfully signed in</p>
-            <div><BsCheck/></div>
+        <div className="w-[60%] mx-auto">
+        <img  className="rounded-full" src={img} alt="" />
+
+        </div>
+        <div className="flex gap-1 items-center px-4 rounded-md absolute top-52 z-50 left-[5rem] bg-white h-[5rem]">
+
+            <p className="text-sm">{userName} You have successfully signed in</p>
+            <div className="h-7 w-7 flex items-center bg-green-900 justify-center rounded-full"><BsCheck/></div>
+        </div>
+           
         </div>}
       </div>
      
