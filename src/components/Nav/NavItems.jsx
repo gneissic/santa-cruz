@@ -35,7 +35,8 @@ const NavItems = (props) => {
         <div className="flex  gap-[4rem] items-center">
           <p className="cursor-pointer hover:text-red-500 transition-all duration-150 ease-linear">Bike Registration</p>
           <p className="cursor-pointer  hover:text-red-500 transition-all duration-150 ease-linear">Find a Dealer</p>
-          <p className="cursor-pointer hover:border hover:bg-white hover:text-black transition-all duration-150 ease-in p-2 rounded-full"><BsPerson className="w-8 h-8" /></p>
+
+          <p onClick={props.showGoogle} className="cursor-pointer hover:border hover:bg-white hover:text-black transition-all duration-150 ease-in p-2 rounded-full"><BsPerson className="w-8 h-8" /></p>
           <Link to={"/cart"}>
           <p className="cursor-pointer hover:border hover:bg-white hover:text-black transition-all duration-150 ease-in p-2 rounded-full"><BsBag className="w-7 h-7"/></p>
           </Link>
