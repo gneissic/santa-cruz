@@ -240,7 +240,7 @@ const ProductDetails = ({ data }) => {
             value={message}
               className="border border-slate-500 rounded-sm lg:rounded-md"
               name="feed"
-              cols="70"
+              cols="45"
               rows="5"
             ></textarea>
           </div>

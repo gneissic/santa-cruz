@@ -60,7 +60,7 @@ const SignIn = (props) => {
             onClick={props.hideGoogle}
             className="fixed bg-black/60 inset-0 z-40"
           ></div>
-          <div className=" font-pops bg-white  shadow-md fixed top-[20%] z-50 py-5 px-7 left-[5%] border rounded-md">
+          <div className=" font-pops bg-white  shadow-md fixed top-[20%] z-50 py-5 px-7 left-[10%] border rounded-md">
             <h1 className="text-center text-2xl">Sign in</h1>
             <div onClick={handleGoogleLogin} className=" cursor-pointer flex items-center gap-3 p-3 shadow border-black/60 rounded-md border mt-[2rem]">
               <p className="text-black text-lg">Continue with google</p>

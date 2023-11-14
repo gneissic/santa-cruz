@@ -45,7 +45,8 @@ const Footer = () => {
       />
         </div>
       
-      <div className="grid place-items-center gap-2 border-t pt-[1rem] mt-[2rem]">
+      <div className="lg:flex justify-between lg:border-t lg:mt-5 lg:text-lg mx-3 py-5">
+      <div className="grid place-items-center gap-2 border-t lg:border-none pt-[1rem] mt-[2rem]">
         <h1>Follow us </h1>
         <div className="flex gap-3">
 <AiFillGithub/>
@@ -54,7 +55,9 @@ const Footer = () => {
         
       </div>
       <p className="text-xs text-center pt-[3rem] pb-3 ">@ 2023 Santa Cruz Bicyles. All Rights Reserved</p>
+ 
       </div>
+           </div>
     </Fragment>
   );
 };
