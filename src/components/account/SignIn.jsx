@@ -22,8 +22,7 @@ const SignIn = (props) => {
 
     const handleGoogleLogin = () => {
         signInWithPopup(auth, googleProvider)
-          .then((result) => {
-            console.log(result.user);
+          .then(() => {
             dispatch(authActions.handleLogin())
             
         

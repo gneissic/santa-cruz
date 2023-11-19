@@ -15,7 +15,7 @@ const ModalMenu = (props) => {
            <p onClick={props.showAbout}>About</p>
            <p onClick={props.showGear}>Gear</p>
        </motion.div>
-       <div className="grid absolute bottom-10 left-12  font-pops font-semibold text-white gap-5  w-[75%] border-t mx-auto   py-5 text-lg tracking-wider text-center">
+       <div className="grid absolute bottom-10 left-9  font-pops font-semibold text-white gap-5  w-[83%] border-t   py-5 text-lg tracking-wider text-center">
            <div><p>Bike Registration</p></div>
            <div className="border-t py-3 mt-2"><p className="pt-4">Find a Dealer</p></div>
            <div className="flex justify-center border-y py-7 items-center">

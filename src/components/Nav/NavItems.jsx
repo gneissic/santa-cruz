@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 
 const NavItems = (props) => {
   const cartNumber = useSelector((state)=> state.cart.cartNumber)
+  const animate  = useSelector((state)=> state.cart.animateCart)
   const [isFixed, setIsFixed] = useState(false)
   useEffect(() => {
     const handleScroll = () => {
@@ -62,7 +63,7 @@ const NavItems = (props) => {
         <div className="flex gap-[1.5rem]">
     
           <Link to="/cart">
-          <div className="relative">
+          <div className={`relative ${animate ? "animate-bounce" : ""}`}>
           <BsBag className="w-7 h-7   text-slate-700" />
           <p className="  absolute -top-4 -right-3 grid place-items-center bg-red-900 text-white h-7 w-7 border border-red-900 rounded-full">{cartNumber}</p>
           </div>

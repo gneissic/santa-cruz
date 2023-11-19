@@ -3,11 +3,16 @@ const initialCartState = {
   cartItems: [],
   cartNumber: 0,
   totalAmount: 0,
+  animateCart: false
+  
 };
 const cartSlice = createSlice({
   name: "cart",
   initialState: initialCartState,
   reducers: {
+    onAnimateCart(state, action){
+    state.animateCart = action.payload
+    },
     addToCart(state, action) {
       state.cartNumber ++
       const newItem = action.payload

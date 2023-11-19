@@ -70,9 +70,16 @@ import Cart from "./components/cart/Cart";
 import CheckoutPage from "./pages/CheckoutPage";
 import Root from "./components/root";
 import NotFound from "./Error";
+import { useEffect } from "react";
+
+
 
 function App() {
- 
+  const {pathname}  = location
+  useEffect(() => {
+    scrollTo(0,0)
+  }, [pathname])
+  
   const router = createBrowserRouter([
     {path: "/", element: <Root  />,errorElement:<NotFound/>, children:[{ path: "/", element: <HomePage />, loader: homePageActions }, { path: "pages/bike-model", element: <BikeModelsPage />, loader: bikeLoader},
     { path: "pages/juliana-bike-models", element: <JulianaModelsPage />, loader: julianabikeLoader},
@@ -110,8 +117,7 @@ function App() {
 
   return (
     <>
-      <RouterProvider router={router} />
-      
+      <RouterProvider    router={router}  />
     </>
   );
 }

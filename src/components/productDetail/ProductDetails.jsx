@@ -2,7 +2,7 @@ import { Fragment, useEffect, useState } from "react";
 import CollectionsNav from "../Nav/CollectionsNav";
 import { BsArrowLeft, BsStar, BsTruck } from "react-icons/bs";
 import { Form, Link, useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { cartActions } from "../../store/cart-slice";
 
 
@@ -18,7 +18,10 @@ const ProductDetails = ({ data }) => {
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [loaded, setLoaded] = useState(false);
-  const formIsValid = name.length > 1 && mail.length > 1 && message.length >1
+  const formIsValid = name.length > 1 && mail.includes('@') && message.length >1
+  const animate = useSelector((state)=> state. cart.animateCart)
+
+
   const enterNameHandler = (e) => {
     setName(e.target.value);
   };
@@ -30,6 +33,8 @@ const ProductDetails = ({ data }) => {
   };
 
   const onSubmitUserData = async () => {
+
+    
     const userData = {
       name,
       mail,
@@ -83,7 +88,7 @@ const ProductDetails = ({ data }) => {
   }
   if (!loading && !loaded) {
     loading =
-    <button disabled={!formIsValid} className=" disabled:cursor-not-allowed w-full lg:w-[25%] bg-black py-3 rounded-md lg:rounded-sm font-pops text-white font-semibold">
+    <button disabled={!formIsValid} className=" disabled:cursor-not-allowed  disabled:bg-gray-500 w-full lg:w-[25%] bg-black py-3 rounded-md lg:rounded-sm font-pops text-white font-semibold">
     Submit Review
   </button>
   }
@@ -92,7 +97,7 @@ const ProductDetails = ({ data }) => {
       <p className="text-center  ">{error}</p>
     </div>
     loading =
-    <button  disabled={!formIsValid} className=" disabled:cursor-not-allowed w-full lg:w-[25%] bg-black py-3 rounded-md lg:rounded-sm font-pops text-white font-semibold">
+    <button  disabled={!formIsValid} className=" disabled:cursor-not-allowed disabled:bg-gray-300 w-full lg:w-[25%] bg-black py-3 rounded-md lg:rounded-sm font-pops text-white font-semibold">
     Submit Review
   </button>
     
@@ -102,6 +107,7 @@ const ProductDetails = ({ data }) => {
     navigate("..")
   }
   const addToCartHandler = () => {
+    dispatch(cartActions.onAnimateCart(true))
     dispatch(
       cartActions.addToCart({
         id: data.id,
@@ -125,6 +131,19 @@ const ProductDetails = ({ data }) => {
       clearTimeout(timer)
     }
   }, [bump])
+
+  useEffect(() => {
+    const timer =   setTimeout(() => {
+      if (animate === true) {
+        dispatch(cartActions.onAnimateCart(false))
+      }
+     }, 4000); 
+
+    return () => {
+      clearTimeout(timer)
+    }
+  }, [dispatch, animate])
+  
   const noBump = " w-full lg:w-[37rem]  py-4 font-pops border-[2px] border-slate-700"
   const bumpButn  = "transform scale-105 transition-transform duration-300 w-full lg:w-[37rem]  py-4 font-pops border-[2px] border-slate-700"
   return (
@@ -268,9 +287,6 @@ const ProductDetails = ({ data }) => {
           </div>
           <div className="mt-[2rem] grid gap-3 pb-5 lg:flex lg:justify-start">
             {loading}
-            <button className="w-full lg:w-[20%] lg:rounded-sm  py-2  border-[2px] border-slate-700 text-black font-bold font-pops">
-              Cancel
-            </button>
           </div>
           {sendMessage}
         </Form>
